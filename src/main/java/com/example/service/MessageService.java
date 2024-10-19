@@ -14,12 +14,10 @@ import com.example.repository.MessageRepository;
 @Transactional
 public class MessageService {
     private final MessageRepository messageRepository;
-    private AccountService accountService;
 
     @Autowired
     public MessageService(MessageRepository messageRepository, AccountService accountService){
         this.messageRepository = messageRepository;
-        this.accountService = accountService;
     }
 
     public Message saveMessage(Message message){
